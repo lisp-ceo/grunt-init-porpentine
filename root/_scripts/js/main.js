@@ -1,11 +1,13 @@
-/**
- * This is the main JavaScript file.
+/*
+ * {%= name %}
+ * {%= homepage %}
+ *
+ * Copyright (c) {%= grunt.template.today('yyyy') %} {%= author_name %}
+ * Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.
  */
 
-/*jshint
-    unused: true,
-    debug: true,
-    devel: true,
-    browser: true,
-    asi: true
- */
+'use strict';
+
+import { a } from "./a";
+ 
+export { a };

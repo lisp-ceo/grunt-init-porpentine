@@ -1,6 +1,5 @@
 {
-  "_scripts/js/main.js": "lib/{%= name %}.js",
+  "_scripts/js/main.js": "_scripts/js/{%= name %}.js",
   "test/name_test.js": "test/{%= name %}_test.js",
   "_posts/first-post.md": "_posts/{%= grunt.template.today( 'yyyy-mm-dd' ) %}-first-post.md"
-
 }

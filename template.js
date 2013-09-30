@@ -40,6 +40,13 @@ exports.template = function( grunt, init, done ) {
             init.prompt( 'version' ),
             init.prompt( 'title' ),
             init.prompt( 'description', 'Eeeeek! Another porpentine site.' ),
+            init.prompt('namespace', function( value, props, done) {
+
+              console.log( '[?] Namespace for Global access to your library object');
+              var namespace = props.namespace || props.name;
+
+              done( null, namespace);
+            }),
             init.prompt( 'homepage' ),
             init.prompt( 'repository' ),
             init.prompt( 'licenses', 'MIT' ),
@@ -68,7 +75,12 @@ exports.template = function( grunt, init, done ) {
               'grunt-contrib-watch'         : '~0.1.4',
               'grunt-css'                   : '~0.5.4',
               'grunt-jekyll'                : '~0.3.9',
-              'grunt-es6-module-transpiler' : '~0.4.1'
+              'grunt-es6-module-transpiler' : '~0.4.1',
+              'grunt-contrib-less'          : '~0.7.0',
+              'grunt-livereload'            : '~0.1.3',
+              'grunt-contrib-connect'       : '~0.5.0',
+              'connect-livereload'          : '~0.3.0',
+              'grunt-reload'                : '~0.2.0'
             };
 
             props.peerDependencies = {
